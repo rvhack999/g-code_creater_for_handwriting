@@ -1,6 +1,6 @@
-from xml.etree.ElementTree import Element, SubElement, tostring
-from io import BytesIO
+from xml.etree.ElementTree import Element, SubElement
 from lxml import etree
+
 
 class VectorRenderer:
     def __init__(self, canvas_size=(800, 600)):

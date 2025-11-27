@@ -1,17 +1,19 @@
-from symbols import SymbolLoader
 from text_processor import TextProcessor
 from vector_renderer import VectorRenderer
 from utils import extract_text_from_docx
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import os
 
-DOCS_FOLDER = 'docs'  # Новая переменная, указывающая на папку с документами
+
+DOCS_FOLDER = 'docs'  # Переменная, указывающая на папку с документами
+INPUT_FILE = 'lesson.docx'  # Название исходного файла
+    
 
 def main():
-    input_file = os.path.join(DOCS_FOLDER, "example.docx")  # Добавлен путь к папке docs
-    output_prefix = "output"
     canvas_size = (800, 600)
-
+    input_file = os.path.join(DOCS_FOLDER, INPUT_FILE)  # Добавлен путь к папке docs
+    output_prefix = "output"
+    
     # Извлечение текста из .docx файла
     extracted_text = extract_text_from_docx(input_file)
 

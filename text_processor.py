@@ -1,4 +1,3 @@
-import random
 
 class TextProcessor:
     SIZE_VARIATION_RANGE = (-5, 5)
